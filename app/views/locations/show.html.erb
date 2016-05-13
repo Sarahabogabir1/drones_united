@@ -17,17 +17,17 @@
 <!-- Rendering form user review on locations -->
 <%= render "reviews/new" %>
  
- 
- <div id="map"></div>
-    <script>
-      function initMap() {
-        var mapDiv = document.getElementById('map');
-        var map = new google.maps.Map(mapDiv, {
-          center: {lat:25.7810203, lng:-80.2815585},
-          zoom: 8
-        });
-      }
-    </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDItDLEBmbrkhkOPRWH5pqW9BFvXQFjqs0&callback=initMap"
-    async defer></script>
+ <div id="map"></div>
+ <script>
+  var map = new Airmap.Map('336d16157d9c1e7ebc0d474c2271b879078ab6b72f34ede439b6e97c5f2aedbd', {
+            container: 'map',
+            center: [33.9416, -118.4085],
+            zoom: 0,
+            theme: 'standard',
+            useLocation: true,
+            createFlights: true,
+            layers: [ 'airports_recreational', 'class_b', 'national_parks', 'tfrs' ]
+        });
+ </script>
+   
