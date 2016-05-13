@@ -1,0 +1,11 @@
+<!-- file for user to leave review --> 
+
+<h1> Leave your review </h1>
+
+<%= form_for(@review) do |f| %>
+<%= f.text_field :name %>
+<%= f.number_field :rating %>
+<%= f.text_field :comment %>
+<%= f.submit "Submit" %>
+<% end %>
+

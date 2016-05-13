@@ -1,0 +1,33 @@
+<!-- Button to go back  -->
+<%= link_to 'Back',locations_path %> <br>
+
+
+<%=@location.name%> <br>
+
+<img src="/assets/<%= @location.picture%>" width="600"> <br>
+
+
+<%= @location.address%><br>
+
+<%= @location.description%><br> 
+
+<!-- Rendering index page for testing -->
+<%= render "reviews/index" %>
+
+<!-- Rendering form user review on locations -->
+<%= render "reviews/new" %>
+ 
+ 
+ <div id="map"></div>
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: {lat:25.7810203, lng:-80.2815585},
+          zoom: 8
+        });
+      }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDItDLEBmbrkhkOPRWH5pqW9BFvXQFjqs0&callback=initMap"
+    async defer></script>

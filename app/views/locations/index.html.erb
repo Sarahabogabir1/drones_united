@@ -1,0 +1,35 @@
+<h1> FIND YOUR SPOT </h1>
+
+<div class="controls">
+
+<label>Choose your level:</label>
+  
+  <button class="filter" data-filter="all">All</button>
+  <button class="filter" data-filter=".beginner">Beginner</button>
+  <button class="filter" data-filter=".intermediate">Intermediate</button>
+   <button class="filter" data-filter=".advanced">Advanced</button>
+</div>
+
+<!-- Loop through the category's locations -->
+<div id="Container" class="container">
+  <% @locations.each do |loc| %>
+    <%if  loc.user_level == 1%>
+       <%@level = "beginner"%>
+    <%elsif  loc.user_level == 2%>
+       <%@level = "intermediate"%>
+    <%elsif  loc.user_level == 3%>
+       <%@level = "advanced"%>
+    <%end%>
+
+    <a href="/locations/<%= loc.id %>">
+      <div class="mix <%= @level%>" data-myorder="<%= loc.name %>"> 
+        <img class="image" width="100%" src="/assets/<%= loc.picture %>" alt="<%= loc.name %> picture">
+      </div>
+    </a>
+
+  <% end %>
+  
+  <div class="gap"></div>
+  <div class="gap"></div>
+  
+</div>
