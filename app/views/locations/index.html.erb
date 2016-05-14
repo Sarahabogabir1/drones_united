@@ -13,8 +13,7 @@
 <!-- Loop through the category's locations -->
 <div id="Container" class="container">
   <% @locations.each do |loc| %>
-
-
+  
     <a href="/locations/<%= loc.id %>">
       <div class="mix <%= loc.level %>" data-myorder="<%= loc.name %>"> 
         <img class="image" width="100%" src="/assets/<%= loc.picture %>" alt="<%= loc.name %> picture">

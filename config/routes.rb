@@ -6,11 +6,14 @@ Rails.application.routes.draw do
 
   # resources :home
   
-  resources :locations
+  resources :locations do
+    resources :reviews
+  end 
+   
 
   # resources :about
 
-  resources :reviews
+
 
   resources :no_fly_zone
 

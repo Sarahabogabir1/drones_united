@@ -12,16 +12,25 @@ before_action :authenticate_user!, :only => [:new, :create]
 	end
 
 	def create
-		@review = Review.new(params[:review])
+		@location = Location.find(params[:location_id])
+		@review = current_user.reviews.new(review_params)
+		@review.location = @location
 		if @review.save
-			redirect_to @user, alert:"User created successfully"
+			redirect_to @location, alert:"review created succesfully"
 		else 
-			redirect_to new_user_session_path, alert: "Error creating user."
+			redirect_to new_user_session_path, alert: "Error creating review"
 		end 
 	end
 	
 	def show
     	@users = User.find(params[:id])
+	end
+
+	private 
+
+	def review_params
+		params.require(:review).permit(:name, :rating, :comment)
+
 	end
 end
 

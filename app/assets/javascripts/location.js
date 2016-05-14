@@ -7,4 +7,6 @@ $(function(){
   $('#Container').mixItUp();
 });
 
+// $('#Container').mixItUp(); // an instance now exists in the session memory
+
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512160402) do
+ActiveRecord::Schema.define(version: 20160513234021) do
 
   create_table "locations", force: :cascade do |t|
     t.integer  "user_level"
@@ -29,9 +29,10 @@ ActiveRecord::Schema.define(version: 20160512160402) do
     t.string   "name"
     t.integer  "rating"
     t.text     "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.integer  "location_id"
   end
 
   create_table "users", force: :cascade do |t|
