@@ -133,30 +133,34 @@
                     <div class="review-block-name"><a href="#"> <%= @name %> </a></div>
                     <div class="review-block-date"> January 29, 2016 <br/>1 day ago</div>
                 </div>
-                
+
                 <!-- iterate over the review -->
                 <% @locationreviews.each do |review| %>
                 <!--<div class="review-block-title"> <%=   %> </div> -->
                 <div class="review-block-description"> <%= review.comment %> </div>
                 <% end %>
                 <!-- REVIEW ***** ICON STARS -->
-                <!-- display user star rating -->
-                <% if @review.rating != nil %>
-                <div class="col-md-9">
-                    <div class="review-block-rate">
-                        <% 5.downto(@review.rating) do |star| %>
-                        <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                        </button>
-                        <% end %>
-                        <% (@review.rating).downto(1) do |star| %>
+
+                <% (1..5) to index |i| %>
+                <% if i  %>
+                <!-- display the colored star -->
+                    <div class="col-md-9">
+                        <div class="review-block-rate">
+                            <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            </button>
+                    <% else %>
+                    <!-- display the uncolored star -->
+                        <% (@review.rating) %>
                         <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         </button>
                         <%end%>
+                        </div>
                     </div>
                 </div>
                 <% end %>
+                
                 
                 <div class="row">
                     <div class="col-md-8">
