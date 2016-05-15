@@ -10,6 +10,9 @@ class LocationsController < ApplicationController
 		@location = Location.find(params[:id])	
 		@locationreviews = @location.reviews
 		@review= Review.new
+		if current_user.reviews.find_by(location_id: params[:id])
+			@review = current_user.reviews.find_by(location_id: params[:id])
+		end
 	end
 
 end

@@ -30,7 +30,7 @@ before_action :authenticate_user!, :only => [:new, :create]
 
 	def review_params
 		params.require(:review).permit(:name, :rating, :comment)
-
 	end
+
 end
 
