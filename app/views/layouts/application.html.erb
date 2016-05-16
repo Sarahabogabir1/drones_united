@@ -25,9 +25,7 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/">Home</a>
-<!--         <img alt="Brand" src="/assets/drone.png">
- -->                                        
+         <a class="navbar-brand" href="/">Home</a> <img class="responsive-image outcome-focused", src="/assets/blue_logo.png">
         </div>
           <ul class="nav navbar-nav">
             <li> <%= link_to 'Locations',locations_path %> </li>
@@ -45,8 +43,24 @@
     </div>
   </nav>
 
-
-  <%= yield %> 
+<!-- ADDING FOOTER BELOW -->
+<!-- <div class="container-fluid">
+  <footer class="site-footer">
+    <div class="row-footer">
+      <div class="col-xs-6 col-sm-4"> @DronesUnited</div>
+      <div class="col-xs-6 col-sm-4">Made with love</div>
+      <div class="clearfix visible-xs-block"></div>
+      <div class="col-xs-6 col-sm-4">By Sarah Abogabir</div>
+    </div>
+  </footer>
+</div> -->
+ 
+ <%= yield %> 
 
 </body>
 </html>
+
+
+
+
+
