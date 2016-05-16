@@ -11,18 +11,29 @@
         <div class="col-md-6">
             <img src="/assets/<%= @location.picture%>" width="400">
         </div>
+    </div>
     
     <div class="row">
         <div class="col-md-6">
             <%= @location.address%>
         </div>
     </div>
+    
     <div class="row">
         <div class="col-md-6">
             <%= @location.description%>
         </div>
     </div>
 
+<!-- <div class="row">
+    <div class="col-md-7">
+        <hr/>
+        <div class="review-block">
+            <div class="row">
+            </div>
+        </div>
+    </div>
+</div> -->
 
 
 <!-- Average user rating -->
@@ -120,85 +131,62 @@
         </div>
     </div>
 </div>
--->
-<!--Box with user picture and comment-->
 
-<div class="row">
-    <div class="col-md-7">
-        <hr/>
-        <div class="review-block">
-            <div class="row">
-                <div class="col-sm-3">
-                    <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
-                    <div class="review-block-name"><a href="#"> <%= @name %> </a></div>
-                    <div class="review-block-date"> January 29, 2016 <br/>1 day ago</div>
-                </div>
 
-                <!-- iterate over the review -->
-                <% @locationreviews.each do |review| %>
-                <!--<div class="review-block-title"> <%=   %> </div> -->
-                <div class="review-block-description"> <%= review.comment %> </div>
-                <% end %>
-                <!-- REVIEW ***** ICON STARS -->
-
-                <% (1..5) to index |i| %>
-                <% if i  %>
-                <!-- display the colored star -->
-                    <div class="col-md-9">
-                        <div class="review-block-rate">
-                            <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
-                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                            </button>
-                    <% else %>
-                    <!-- display the uncolored star -->
-                        <% (@review.rating) %>
-                        <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                        </button>
-                        <%end%>
-                        </div>
-                    </div>
-                </div>
-                <% end %>
+ <!- iterate over the review -->
+    <% @locationreviews.each do |review| %>
+      <div class="col-sm-3">
+        <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+	<div class="review-block-name"><a href="#"> <%= review.user_name %> </a></div>
+	<div class="review-block-date"> January 29, 2016 <br/>1 day ago</div>
+      </div>
+      <div class="review-block-description"> 
+        <%= review.comment %>
+	<% 5.times do |i| %>
+          <div class="col-md-9">  <!-- display the colored star -->
+	    <% if i + 1 <= review.rating %>
+	      <div class="review-block-rate">
+	        <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+		  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                </button>
+              </div>        
+	    <% else %>
+              <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </button>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
                 
-                
-                <div class="row">
-                    <div class="col-md-8">
-                        <% if user_signed_in? %>
-                        <%= render "reviews/new" %>
-                        <% end %>
-                    </div>
-                </div>
-            </div>
+    <div class="row">
+        <div class="col-md-8">
+            <% if user_signed_in? %>
+                <%= render "reviews/new" %>
+            <% end %>
+        </div>
+    </div>
 
-
-
-
+    
+    <!-- MAP NEEDS TO GET FIXED -->
      <!--  <div class="map-wrapper">
             <div id="map">
                 <script>
-                var map = new Airmap.Map('336d16157d9c1e7ebc0d474c2271b879078ab6b72f34ede439b6e97c5f2aedbd',{
-                container: 'map',
-                center: [33.9416, -118.4085],
-                zoom: 0,
-                theme: 'standard',
-                useLocation: true,
-                createFlights: true,
-                layers: ['airports_recreational', 'class_b', 'national_parks', 'tfrs']
-                });
+                    var map = new Airmap.Map('336d16157d9c1e7ebc0d474c2271b879078ab6b72f34ede439b6e97c5f2aedbd',{
+                    container: 'map',
+                    center: [33.9416, -118.4085],
+                    zoom: 0,
+                    theme: 'standard',
+                    useLocation: true,
+                    createFlights: true,
+                    layers: ['airports_recreational', 'class_b', 'national_parks', 'tfrs']
+                    });
                 </script>
             </div>
         </div>
-    </div> -->
-                
-            </div>
-            <!-- Bootstrap core JavaScript
-            ================================================== -->
-            <!-- Placed at the end of the document so the pages load faster -->
+
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
             <script src="js/bootstrap.min.js"></script>
-            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-            <script src="js/ie10-viewport-bug-workaround.js"></script>
-        </body>
-    </html>
+          
