@@ -1,11 +1,9 @@
 
 <%= link_to 'Back',locations_path %> <br>
 
-    <div class="row">
-        <div class="col-md-6">
+    
             <%=@location.name%>
-        </div>
-    </div>
+      
    
     <div class="row">
         <div class="col-md-6">
@@ -141,7 +139,7 @@
 	<div class="review-block-date"> January 29, 2016 <br/>1 day ago</div>
       </div>
       <div class="review-block-description"> 
-        <%= review.comment %>
+        <p><%= review.comment %></p>
 	<% 5.times do |i| %>
           <div class="col-md-9">  <!-- display the colored star -->
 	    <% if i + 1 <= review.rating %>

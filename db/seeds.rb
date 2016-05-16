@@ -102,12 +102,16 @@ Location.create(
 
 #-----------------------------------------------------------------------------------------------------------------
 
+locations = Location.all
 
+users = (1..20).map do |i|
+  User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: "password", password_confirmation: "password")
+end
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+locations.each do |location|
+  review_count = rand(10) + 1
+  review_count.times do |i|
+    location.reviews.create!(user: users.sample, rating: rand(5) + 1, comment: Faker::StarWars.quote)  
+  end   
+end
+
