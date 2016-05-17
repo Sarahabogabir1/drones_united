@@ -155,9 +155,10 @@
         </div>
         </div>
     </div>
-</div> <!-- end of second container -->
+</div> 
 
-<!-- <div class="row">
+<!-- 
+<div class="row">
     <div class="col-md-7">
         <hr/>
         <div class="review-block">
@@ -165,11 +166,9 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>  -->
 
 
-    
-    <!-- MAP NEEDS TO GET FIXED -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12">
@@ -179,8 +178,8 @@
                     console.log("SSDFSDFLSFKSDJFKSJDFSDFJKSDJFLJDLJLJFJDLSJFLSDJ")
                     var map = new Airmap.Map('336d16157d9c1e7ebc0d474c2271b879078ab6b72f34ede439b6e97c5f2aedbd',{
                         container: 'map',
-                        center: [33.9416, -118.4085],
-                        zoom: 0,
+                        center: [<%= @location.lat %>, <%= @location.lng %>],
+                        zoom: 10,
                         theme: 'standard',
                         useLocation: true,
                         createFlights: true,
@@ -192,4 +191,9 @@
         </div>
         </div>
     </div>
-</div>
+
+
+
+
+
+    
