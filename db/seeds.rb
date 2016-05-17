@@ -6,9 +6,11 @@ Location.create(
  	name: "Southside Park",
  	address: "140 Southwest 11 Street, Miami, FL 33130",
  	picture: "southsidepark_brickell.jpg",
- 	description:"Southside Park is in the heart of Brickell. It's a smaller area, and near the metro spot which a plus. The open green area is ideal for the beginner
- 		that wants to stay within the premise. There are trees that surround the park, so the whole point is to fly your drone within the green area. Practice your
- 		taking off and landing.Tip: This area has a play ground, so fly with caution. ")
+ 	description:"Southside Park is in the heart of Brickell. It's a smaller area, and near the metro spot which a plus.
+ 		 The open green area is ideal for the beginner
+ 		that wants to stay within the premise. There are trees that surround the park, 
+ 		so the whole point is to fly your drone within the green area. Practice your
+ 		taking off and landing.Tip: This area has a play ground, so fly with caution.")
 
 #-------- 2 location----------------------------------------------------------------------------------------------
 Location.create(
@@ -18,11 +20,14 @@ Location.create(
  	name: "Miramar National Park",
  	address: "Miramar Pkwy, Miramar, FL 33027",
  	picture: "miramar.jpg",
- 	description:"National Parks are 90% illegal but this location is not! This is a wonderful recreational area with pools, a water park, picnic areas, athletic facilities.  
+ 	description:"National Parks are 90% illegal but this location is not! This is a wonderful
+ 	 recreational area with pools, a water park, picnic areas, athletic facilities.  
  	fields & lakeside walking trails.Miramar is relatively new (built in 2007). On Saturday and 
- 	On Sunday the cost is: $1.50 per person, and it’s free on weekdays. Best time to fly is weekdays during school hours. 
-	There are a couple of large spots of open grassy areas. One is near the South entrance, North-West of the baseball diamonds, and
-	one in the middle of the park. Sometimes there are kids playing soccer, baseball and other activities, so keep your eyes open")
+ 	On Sunday the cost is: $1.50 per person, and it’s free on weekdays. Best time to fly is
+ 	weekdays during school hours. There are a couple of large spots of open grassy areas. 
+ 	One is near the South entrance, North-West of the baseball diamonds, and
+	one in the middle of the park. Sometimes there are kids playing soccer,
+	 baseball and other activities, so keep your eyes open"
 
 #------- 3 location ----------------------------------------------------------------------------------------------
 
@@ -61,48 +66,13 @@ Location.create(
 	lng: -80.1249429,
 	user_level: 3,
 	name:"Lummus Park, South Beach",
-	address:"Top of a building",
+	address:" Ocean Dr, Miami Beach, FL, 33139",
 	picture:"lummus_park.jpg",
 	description:"Great park to go for a jog, people watch, lay down under a palm tree or just sit and relax. Best times to fly drones are sunrise and sunset for best footage.
 	It is harder to fly the drone during the day because of the amount of activity surrounding the area.If you are confident you can control your drone, then flying 
-	during the day should not be a problem")
+	during the day should not be a problem.")
 
-#------------ 6 location ***FAKE  ------------------------------------------------------------------------------------
-
-Location.create(
-	lat: 25.2105299,
-	lng: -80.3249429,
-	user_level: 2,
-	name:"North of South Beach",
-	address:"Some other place in Brickell",
-	picture:"south_beach.jpg",
-	description:"Some areas are very populated with people and airplanes so you need to be careful.
-			Best to fly in the morning or at sunset")
-
-#------------ 7 location ***FAKE ----------------------------------------------------------------------------------
-Location.create(
-	lat: 25.2105299,
-	lng: -80.3249429,
-	user_level: 2,
-	name:"North of South Beach",
-	address:"blah blah",
-	picture:"drone_pic.jpg",
-	description:"Some areas are very populated with people and airplanes so you need to be careful.
-			Best to fly in the morning or at sunset")
-
-#------------ 8 location ***FAKE ----------------------------------------------------------------------------------
-Location.create(
-	lat: 25.2105299,
-	lng: -80.3249429,
-	user_level: 3,
-	name:"Brickell by pier",
-	address:"blah blah",
-	picture:"brickell-avenue.jpg",
-	description:"Some areas are very populated with people and airplanes so you need to be careful.
-			Best to fly in the morning or at sunset. The weeekends are usually less crowded around the Brickell area")
-
-#-----9 location ------------------------------------------------------------------------------------------------------------
-
+#-----------------6 location --------------------------------------------------------------------------------------
 Location.create(
 	lat: 25.7476542,
 	lng: -80.3748673,
@@ -113,9 +83,78 @@ Location.create(
 	description:"FIU is a great spot for a beginner. You can find over a dozen pilots during the weekends, especially early in the morning. Remember: don't be shy! You might learn a lot from other droners. 
 	What makes this spot ideal for a beginner is the open area where you can practice your take off and lading. and that's exactly what a beginner needs. 
 	Droners have been flying in this zone for many years. Remember to be respectful and avoid flying your drone around campus because you do not want to get reported or draw attention.
-	Just show up with your drone and fly! The park rangers are friendly which leaves you at ease while your are flying." )
-#-------------------------------------------------------------------------------------------------------
+	Just show up with your drone and fly! The park rangers are friendly which leaves you at ease while your are flying.")
 
+
+#------------ 7 location ***FAKE  ------------------------------------------------------------------------------------
+
+Location.create(
+	lat: 25.2105299,
+	lng: -80.3249429,
+	user_level: 2,
+	name:"North of South Beach",
+	address:"South Beach",
+	picture:"south_beach.jpg",
+	description:"Some areas are very populated with people and airplanes so you need to be careful.
+			Best to fly in the morning or at sunset")
+
+#------------ 8 location REAL  ----------------------------------------------------------------------------------
+	Location.create(
+	lat: 25.7679508,
+	lng: -80.1886357,
+	user_level: 3,
+	name:"Brickell Key",
+	address:"701 Brickell Key Blvd, Miami, FL 33131",
+	picture:"brickell-avenue.jpg",
+	description:"Some areas are very populated with people and airplanes so you need to be careful.
+			Best to fly in the morning or at sunset. The weeekends are usually less crowded around the Brickell area")
+
+#------------ 9 location ***Needs editing ----------------------------------------------------------------------------------
+
+Location.create(
+	lat: 25.7847462,
+	lng: -80.1865692,
+	user_level: 2,
+	name:"Museum Park",
+	address:"1075 Biscayne Blvd, Miami, FL 33132",
+	picture:"artmuseum.jpg",
+	description:"Museum Park is a 30-acre public, urban park in downtown Miami, Florida. 		
+			The park opened in 1976 as Bicentennial Park on the site of several slips served by the Seaboard Air Line Railroad.
+			Spacious waterside park featuring a sand beach, large amphitheater and a playground.There is a beatiful open 
+				space by the water. It can be a bit crowded with people. Best times are early in the morning")
+#-----10-------------------------------------------------------------------------------------------------------------
+Location.create(
+	lat: 25.7762429,
+	lng: -80.1861135
+	user_level: 2,
+	name:"Bayfront Park Amphitheatre",
+	address:"301 Biscayne Blvd, Miami, FL 33132",
+	picture:"bayfront.jpg",
+	description:"Some areas are very populated with people and airplanes so you need to be careful.
+			Best to fly in the morning or at sunset")
+
+#------11  FAKE -----------------------------------------------------------------------------------------------------------
+Location.create(
+	lat: 25.2105299,
+	lng: -80.3249429,
+	user_level: 2,
+	name:"North of South Beach",
+	address:" 93rd St, Surfside, FL 33154",
+	picture:"surfside.jpg",
+	description:"Public beach north of Miami (with skyline views), offering public access points & showers.
+			Best to fly in the morning or at sunset. Keey an eye on high season and low season")
+#------12  FAKE -----------------------------------------------------------------------------------------------------------
+Location.create(
+	lat: 25.2105299,
+	lng: -80.3249429,
+	user_level: 2,
+	name:"North of South Beach",
+	address:" 93rd St, Surfside, FL 33154",
+	picture:"drone_pic.jpg",
+	description:"Some areas are very populated with people and airplanes so you need to be careful.
+			Best to fly in the morning or at sunset")
+
+#--------------------------------------------------------------------------------------------------------------------
 locations = Location.all
 
 users = (1..20).map do |i|
