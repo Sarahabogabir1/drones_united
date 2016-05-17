@@ -27,7 +27,7 @@ Location.create(
  	weekdays during school hours. There are a couple of large spots of open grassy areas. 
  	One is near the South entrance, North-West of the baseball diamonds, and
 	one in the middle of the park. Sometimes there are kids playing soccer,
-	 baseball and other activities, so keep your eyes open"
+	 baseball and other activities, so keep your eyes open")
 
 #------- 3 location ----------------------------------------------------------------------------------------------
 
@@ -68,8 +68,10 @@ Location.create(
 	name:"Lummus Park, South Beach",
 	address:" Ocean Dr, Miami Beach, FL, 33139",
 	picture:"lummus_park.jpg",
-	description:"Great park to go for a jog, people watch, lay down under a palm tree or just sit and relax. Best times to fly drones are sunrise and sunset for best footage.
-	It is harder to fly the drone during the day because of the amount of activity surrounding the area.If you are confident you can control your drone, then flying 
+	description:"Great park to go for a jog, people watch, lay down under a palm tree or just sit and relax. 
+	Best times to fly drones are sunrise and sunset for best footage.
+	It is harder to fly the drone during the day because of the amount of activity surrounding the area.
+	If you are confident you can control your drone, then flying 
 	during the day should not be a problem.")
 
 #-----------------6 location --------------------------------------------------------------------------------------
@@ -107,7 +109,7 @@ Location.create(
 	address:"701 Brickell Key Blvd, Miami, FL 33131",
 	picture:"brickell-avenue.jpg",
 	description:"Some areas are very populated with people and airplanes so you need to be careful.
-			Best to fly in the morning or at sunset. The weeekends are usually less crowded around the Brickell area")
+			Best to fly in the morning or at sunset. The weeekends are usually less crowded around the Brickell area.")
 
 #------------ 9 location ***Needs editing ----------------------------------------------------------------------------------
 
@@ -121,17 +123,17 @@ Location.create(
 	description:"Museum Park is a 30-acre public, urban park in downtown Miami, Florida. 		
 			The park opened in 1976 as Bicentennial Park on the site of several slips served by the Seaboard Air Line Railroad.
 			Spacious waterside park featuring a sand beach, large amphitheater and a playground.There is a beatiful open 
-				space by the water. It can be a bit crowded with people. Best times are early in the morning")
+				space by the water. It can be a bit crowded with people. Best times are early in the morning.")
 #-----10-------------------------------------------------------------------------------------------------------------
 Location.create(
 	lat: 25.7762429,
-	lng: -80.1861135
+	lng: -80.1861135,
 	user_level: 2,
 	name:"Bayfront Park Amphitheatre",
 	address:"301 Biscayne Blvd, Miami, FL 33132",
 	picture:"bayfront.jpg",
 	description:"Some areas are very populated with people and airplanes so you need to be careful.
-			Best to fly in the morning or at sunset")
+			Best to fly in the morning or at sunset.")
 
 #------11  FAKE -----------------------------------------------------------------------------------------------------------
 Location.create(
@@ -139,7 +141,7 @@ Location.create(
 	lng: -80.3249429,
 	user_level: 2,
 	name:"North of South Beach",
-	address:" 93rd St, Surfside, FL 33154",
+	address:"93rd St, Surfside, FL 33154",
 	picture:"surfside.jpg",
 	description:"Public beach north of Miami (with skyline views), offering public access points & showers.
 			Best to fly in the morning or at sunset. Keey an eye on high season and low season")
@@ -149,7 +151,7 @@ Location.create(
 	lng: -80.3249429,
 	user_level: 2,
 	name:"North of South Beach",
-	address:" 93rd St, Surfside, FL 33154",
+	address:"93rd St, Surfside, FL 33154",
 	picture:"drone_pic.jpg",
 	description:"Some areas are very populated with people and airplanes so you need to be careful.
 			Best to fly in the morning or at sunset")
