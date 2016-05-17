@@ -55,7 +55,7 @@ Location.create(
 	It is recommended to fly during the weekdays because airspace is mostly dominated by kites
  	and other drones. If you fly during the weekend, proceed with caution.")
 
-#------------ 5 location ---------------------------------------------------------------------------------------------
+#------------ 5 location ***FAKE ---------------------------------------------------------------------------------------------
 
 Location.create(
 	lat: 25.3105299,
