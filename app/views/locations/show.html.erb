@@ -1,22 +1,54 @@
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+
+
 <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 col-md-8"><strong><%=@location.name%></strong></div>
-      <div class="col-xs-6 col-md-4"> <strong>About this spot: </strong></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-md-8">
-            <img src="/assets/<%= @location.picture%>" width="600px" height:"600px">
+    <div class="col-md-12">
+        <div class="location_font">
+            <p> Location: <strong><%=@location.name%></strong>
         </div>
-        <div class="col-xs-6 col-md-4">
-            <p> Address: <%= @location.address%> <br> </p>
-            <%= @location.description%>
-        </div>   
     </div>
 </div>
 
-<div class="container">
 
+<div class="container-fluid">
+    <div class="container-color">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="img-wrapper">
+                    <img src="/assets/<%= @location.picture%>" width="400px" height:"600px">
+                </div>
+            </div>
+        <div class="col-md-8">
+            <div class="map-wrapper"> 
+                <div id="map">
+                    <script>
+                        console.log("SSDFSDFLSFKSDJFKSJDFSDFJKSDJFLJDLJLJFJDLSJFLSDJ")
+                        var map = new Airmap.Map('336d16157d9c1e7ebc0d474c2271b879078ab6b72f34ede439b6e97c5f2aedbd',{
+                            container: 'map',
+                            center: [<%= @location.lat %>, <%= @location.lng %>],
+                            zoom: 10,
+                            theme: 'standard',
+                            useLocation: true,
+                            createFlights: true,
+                            layers: ['airports_recreational', 'class_b', 'national_parks', 'tfrs'],
+                            interactive: false
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6 col-md-4"> <strong>About this spot: </strong></div>
+    </div>
+</div>
+
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-8">
             <div class="rating-block">
@@ -40,7 +72,8 @@
             </div>
         </div>
 
-        <div class="col-sm-3">
+
+        <!-- <div class="col-sm-3">
             <h4>Rating breakdown</h4>
             <div class="pull-left">
                 <div class="pull-left" style="width:35px; line-height:1;">
@@ -109,10 +142,10 @@
             </div>
         </div>
     </div>
-<!-- Rating breakdown -->
 
 
-<!--  iterate over the review  -->
+
+<!- iterate over the review  -->
     <div class="row">
         <div class="col-sm-7">
         <div class="review-block">
@@ -169,28 +202,8 @@
 </div>  -->
 
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-12">
-        <div class="map-wrapper"> 
-            <div id="map">
-                <script>
-                    console.log("SSDFSDFLSFKSDJFKSJDFSDFJKSDJFLJDLJLJFJDLSJFLSDJ")
-                    var map = new Airmap.Map('336d16157d9c1e7ebc0d474c2271b879078ab6b72f34ede439b6e97c5f2aedbd',{
-                        container: 'map',
-                        center: [<%= @location.lat %>, <%= @location.lng %>],
-                        zoom: 10,
-                        theme: 'standard',
-                        useLocation: true,
-                        createFlights: true,
-                        layers: ['airports_recreational', 'class_b', 'national_parks', 'tfrs'],
-                        interactive: false
-                    });
-                </script>
-            </div>
-        </div>
-        </div>
-    </div>
+<!-- AIR MAP -->
+
 
 
 

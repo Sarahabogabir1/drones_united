@@ -1,24 +1,4 @@
 
-//------------------Map here needs to get fixed---------------------
-.map-wrapper {
-  //vw:view port width
-  width: 100vw;
-  //vh view port height
-  height: 100vh;
-}
-
-#map {
-  height: 100vh;
-  position: relative;
-}
-
-canvas {
-  position:relative !important;
-  height: 200% !important;
-  width:80% !important;
-}
-
-
 //-----------
 
 .image {
@@ -26,38 +6,37 @@ canvas {
     height: 250px;
 }
 
-h1 {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 40px;
-
-}
+// h1 {
+//     text-align: center;
+//     font-family: 'Raleway', sans-serif;
+//     font-size: 40px;
+// }
 
 body, button{
   font-family: 'Raleway', sans-serif;
 }
 
-.controls {
-    padding: 1.5%;
-    background: #A9ADAB;
-    color: #f5f5f5;
-}
+// .controls {
+//     padding: 1.5%;
+//     background: #A9ADAB;
+//     color: #f5f5f5;
+// }
 
 label{
   font-weight: 800;
   margin: 0 .4em 0 0;
 }
 
-button{
-  display: inline-block;
-  padding: .4em .8em;
-  background: #666;
-  border: 0;
-  color: #ddd;
-  font-size: 16px;
-  font-weight: 300;
-  border-radius: 4px;
-  cursor: pointer;
+button {
+    display: inline-block;
+    padding: .4em .8em;
+    background: #4699E5;
+    border: 0;
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 button.active{
@@ -93,7 +72,7 @@ button + label{
 
 .container .mix{
   text-align: left;
-  background: #03899c;
+  // background: #03899c;
   margin-bottom: 2%;
   display: none;
 }
@@ -136,7 +115,7 @@ button + label{
   }
 }
 
--------------------------------Review and comment box css
+// -------------------------------Review and comment box css
 
 
 body {
