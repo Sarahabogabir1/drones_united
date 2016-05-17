@@ -27,7 +27,7 @@
       <div class="navbar-header">
          <a class="navbar-brand" href="/">Home</a> <img class="responsive-image outcome-focused", src="/assets/blue_logo.png">
         </div>
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav navbar-right">
             <li> <%= link_to 'Locations',locations_path %> </li>
             <% if current_user %>
                 <li> <%= link_to 'Sign Out',destroy_user_session_path, method: :delete %> </li>
