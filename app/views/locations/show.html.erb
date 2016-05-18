@@ -2,24 +2,14 @@
 
 
 <div class="container-fluid">
-    <div class="col-md-12">
-        <div class="location_font">
-            <p> Location: <strong><%=@location.name%></strong></p>
-            <p><%=@location.lat%></p>
-        </div>
-    </div>
-</div>
+    <div class="location_font">
+        Location: <strong><%=@location.name%></strong>
 
 
-<div class="container-fluid">
-    <div class="container-color">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="img-wrapper">
-                    <img src="/assets/<%= @location.picture%>" width="400px" height:"600px">
-                </div>
-            </div>
-        <div class="col-md-8">
+
+<div class="container-fluid map-section">
+    <div class="row">
+        <div class="col-md-6">
             <div class="map-wrapper"> 
                 <div id="map">
                     <script>
@@ -38,170 +28,82 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-
-
-<div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-6 col-md-4"> <strong>About this spot: </strong></div>
-    </div>
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="rating-block">
-                <h4><strong>Average user rating</strong></h4>
-                <h2 class="bold padding-bottom-7">4.3 <small>/ 5</small></h2>
-                <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                </button>
-            </div>
-        </div>
-
-
-        <!-- <div class="col-sm-3">
-            <h4>Rating breakdown</h4>
-            <div class="pull-left">
-                <div class="pull-left" style="width:35px; line-height:1;">
-                    <div style="height:9px; margin:5px 0;">5 <span class="glyphicon glyphicon-star"></span></div>
-                </div>
-                <div class="pull-left" style="width:180px;">
-                    <div class="progress" style="height:9px; margin:8px 0;">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5" style="width: 1000%">
-                            <span class="sr-only">80% Complete (danger)</span>
+        <div class="col-md-6">
+            <div class="review-block">
+                <% @locationreviews.each do |review| %>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+                            <div class="review-block-name"><a href="#"> <%= review.user_name %> </a></div>
+                            <div class="review-block-date"> May 29, 2016 <br/>1 day ago</div>
                         </div>
-                    </div>
-                </div>
-                <div class="pull-right" style="margin-left:10px;">1</div>
-            </div>
-            <div class="pull-left">
-                <div class="pull-left" style="width:35px; line-height:1;">
-                    <div style="height:9px; margin:5px 0;">4 <span class="glyphicon glyphicon-star"></span></div>
-                </div>
-                <div class="pull-left" style="width:180px;">
-                    <div class="progress" style="height:9px; margin:8px 0;">
-                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
-                            <span class="sr-only">80% Complete (danger)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pull-right" style="margin-left:10px;">1</div>
-            </div>
-            <div class="pull-left">
-                <div class="pull-left" style="width:35px; line-height:1;">
-                    <div style="height:9px; margin:5px 0;">3 <span class="glyphicon glyphicon-star"></span></div>
-                </div>
-                <div class="pull-left" style="width:180px;">
-                    <div class="progress" style="height:9px; margin:8px 0;">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%">
-                            <span class="sr-only">80% Complete (danger)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pull-right" style="margin-left:10px;">0</div>
-            </div>
-            <div class="pull-left">
-                <div class="pull-left" style="width:35px; line-height:1;">
-                    <div style="height:9px; margin:5px 0;">2 <span class="glyphicon glyphicon-star"></span></div>
-                </div>
-                <div class="pull-left" style="width:180px;">
-                    <div class="progress" style="height:9px; margin:8px 0;">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5" style="width: 40%">
-                            <span class="sr-only">80% Complete (danger)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pull-right" style="margin-left:10px;">0</div>
-            </div>
-            <div class="pull-left">
-                <div class="pull-left" style="width:35px; line-height:1;">
-                    <div style="height:9px; margin:5px 0;">1 <span class="glyphicon glyphicon-star"></span></div>
-                </div>
-                <div class="pull-left" style="width:180px;">
-                    <div class="progress" style="height:9px; margin:8px 0;">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5" style="width: 20%">
-                            <span class="sr-only">80% Complete (danger)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pull-right" style="margin-left:10px;">0</div>
-            </div>
-        </div>
-    </div>
-
-
-
-<!- iterate over the review  -->
-    <div class="row">
-        <div class="col-sm-7">
-        <div class="review-block">
-            <% @locationreviews.each do |review| %>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
-                        <div class="review-block-name"><a href="#"> <%= review.user_name %> </a></div>
-                        <div class="review-block-date"> May 29, 2016 <br/>1 day ago</div>
-                    </div>
-
-                    <!--     PROBLEM IS HERE -->
-                    <div class="col-sm-9">
-                        <div class="review-block-rate">
-                            <p><%= review.comment %></p> 
-                            <% 5.times do |i| %>
-                                <% if i + 1 <= review.rating %> 
-                                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
-                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                                    </button>
-                                <% else %>
-                                    <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
-                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                                    </button>
+                        <div class="col-sm-9">
+                            <div class="review-block-rate">
+                                <p><%= review.comment %></p> 
+                                <% 5.times do |i| %>
+                                    <% if i + 1 <= review.rating %> 
+                                        <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                        </button>
+                                    <% else %>
+                                        <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                        </button>
+                                    <% end %>
                                 <% end %>
-                            <% end %>
+                            </div>
                         </div>
+                        <hr>
                     </div>
-                    <hr>
-                </div>
-            <% end %>
-            
-            <div class="row">   
-                <div class="col-md-8">
-                    <% if user_signed_in? %>
-                        <%= render "reviews/new" %>
-                    <% end %>
-                </div>
-            </div>
+                <% end %>
+    </div>
+</div>
+
+
+
+<div class="container-fluid">
+        <div class="img-location">
+            <img width="500" height="240" src="/assets/<%= @location.picture%>">
         </div>
+
+        <div class="rating-block">
+          <h4><strong>Average user rating</strong></h4>
+             <h2 class="bold padding-bottom-7">4.3 <small>/ 5</small></h2>
+            <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<div class="container-fluid img-desc">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-left">
+            <p><%=@location.description%></p>
         </div>
     </div>
-</div> 
-
-<!-- 
-<div class="row">
-    <div class="col-md-7">
-        <hr/>
-        <div class="review-block">
-            <div class="row">
+</div>
+        <div class="row">   
+            <div class="col-md-8">
+                <% if user_signed_in? %>
+                    <%= render "reviews/new" %>
+                <% end %>
             </div>
         </div>
-    </div>
-</div>  -->
-
+</div>
 
 <footer>
   <div class="container-fluid">

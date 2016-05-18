@@ -1,44 +1,46 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,900,800);
 
-// html, body, * {
-//     padding: 0;
-//     margin: 0;
+//picture
+// .img-wrapper{
+//   background-size: cover;
+//    background-position: center center;
+//    background-repeat: no-repeat;
+//    padding: 10px 0;
 // }
-// html {
-//     width: 100%;
-//     height: 100%;
-//     position: absolute;
-// }
-#leftCol {
-    background: #ddd;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-    right: 10%;
-    overflow: hidden;
-    padding: 2em;
-}
-#rightCol {
-    background: #bbb;
-    position: absolute;
-    left: 40%;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    overflow-y: auto;    
-    padding: 2em;
-}
-.description_font{
-  font-weight: bold;
-  color:#222;
-}
 
-p {
-    margin: 60px;
-    color: black;
-}
+
+
+
+// #leftCol {
+//     background: #ddd;
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;
+//     left: 0;
+//     top: 0;
+//     right: 10%;
+//     overflow: hidden;
+//     padding: 2em;
+// }
+// #rightCol {
+//     background: #bbb;
+//     position: absolute;
+//     left: 40%;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     overflow-y: auto;    
+//     padding: 2em;
+// }
+// .description_font{
+//   font-weight: bold;
+//   color:#222;
+// }
+
+// p {
+//     margin: 60px;
+//     color: black;
+// }
 
 
 //------------------------------------------------------
@@ -61,11 +63,19 @@ canvas {
 	font-family:'Raleway', Arial, serif;
 	font-weight: 400;
 	font-size: 30px;
-    padding-top: 50px;
+  padding: 50px 0;
 }
 
 .container-color{
 	background:#337AB7;
+}
+
+.img-desc{
+  padding-bottom: 50px;
+}
+
+.img-location{
+  margin-top: 30px;
 }
 
 // -------------------------------Review and comment box css
@@ -80,13 +90,21 @@ canvas {
   font-weight:700;
 }
 
-.review-block{
-  background-color:#FAFAFA;
-  border:1px solid #EFEFEF;
-  padding:15px;
-  border-radius:3px;
-  margin-bottom:15px;
+.map-section{
+  background: #151515;
 }
+
+.review-block {
+    background-color: #171414;
+    border: 1px solid transparent;
+    padding: 15px;
+    border-radius: 3px;
+    margin-bottom: 45px;
+    overflow: scroll;
+    height: 320px;
+}
+
+
 .review-block-name{
   font-size:12px;
   margin:10px 0;

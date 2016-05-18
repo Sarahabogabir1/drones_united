@@ -42,6 +42,8 @@ main{
 .video {
   background-size:cover;
   background-position:bottom;
+  position: relative;
+  z-index: -2;
 }
 .video-container {
   height: 600px;
