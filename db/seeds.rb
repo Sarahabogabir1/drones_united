@@ -135,7 +135,7 @@ Location.create(
 	description:"Some areas are very populated with people and airplanes so you need to be careful.
 			Best to fly in the morning or at sunset.")
 
-#------11  FAKE -----------------------------------------------------------------------------------------------------------
+#------11 -----------------------------------------------------------------------------------------------------------
 Location.create(
 	lat: 25.2105299,
 	lng: -80.3249429,
@@ -145,7 +145,7 @@ Location.create(
 	picture:"surfside.jpg",
 	description:"Public beach north of Miami (with skyline views), offering public access points & showers.
 			Best to fly in the morning or at sunset. Keey an eye on high season and low season")
-#------12  FAKE -----------------------------------------------------------------------------------------------------------
+#------12 -----------------------------------------------------------------------------------------------------------
 Location.create(
 	lat: 25.2105299,
 	lng: -80.3249429,
@@ -156,7 +156,7 @@ Location.create(
 	description:"Some areas are very populated with people and airplanes so you need to be careful.
 			Best to fly in the morning or at sunset")
 
-#--------------------------------------------------------------------------------------------------------------------
+#-------Temporary for Demo use -------------------------------------------------------------------------------------------------------------
 locations = Location.all
 
 users = (1..20).map do |i|

@@ -1,7 +1,7 @@
 class LocationsController < ApplicationController
-	# has many :categories
 	
-	def index #to display all locations
+	def index 
+		#retrieving from DB
 		@locations = Location.all
 	end 
 
